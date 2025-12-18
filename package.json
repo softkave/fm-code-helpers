@@ -1,5 +1,5 @@
 {
-  "name": "code-migration-helpers",
+  "name": "fm-code-helpers",
   "version": "0.6.1",
   "description": "Provides useful (but currently not thorough) code migration helpers",
   "author": {
@@ -12,12 +12,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/softkave/code-migration-helpers.git"
+    "url": "https://github.com/softkave/fm-code-helpers.git"
   },
   "bugs": {
-    "url": "https://github.com/softkave/code-migration-helpers/issues"
+    "url": "https://github.com/softkave/fm-code-helpers/issues"
   },
-  "homepage": "https://github.com/softkave/code-migration-helpers",
+  "homepage": "https://github.com/softkave/fm-code-helpers",
   "type": "module",
   "exports": {
     ".": null
@@ -31,8 +31,8 @@
     "clean-esm-bin": "rm -rf ./esm-bin",
     "compile-esm-bin": "tsc --project tsconfig-esm.json",
     "cp-pkg-esm-bin": "cp ./package.json ./esm-bin/package.json",
-    "add-ext-esm-bin": "npx --yes -- code-migration-helpers@latest add-ext -f='./esm-bin' --to='.mjs'",
-    "rename-ext-esm-bin": "npx --yes -- code-migration-helpers@latest rename-ext -f='./esm-bin' --from='.js' --to='.mjs'",
+    "add-ext-esm-bin": "npx --yes -- fm-code-helpers@latest add-ext -f='./esm-bin' --to='.mjs'",
+    "rename-ext-esm-bin": "npx --yes -- fm-code-helpers@latest rename-ext -f='./esm-bin' --from='.js' --to='.mjs'",
     "compile-esm": "npm run clean-esm-bin && npm run compile-esm-bin && npm run cp-pkg-esm-bin && npm run add-ext-esm-bin && npm run rename-ext-esm-bin",
     "start-esm": "node ./esm-bin/src/index.mjs",
     "lint": "gts lint",
